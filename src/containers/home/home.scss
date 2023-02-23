@@ -23,7 +23,7 @@
 
 .grid-container {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 
     position: absolute;
@@ -36,7 +36,11 @@
 
 .grid-elements {
     display: grid;
-    grid-template-columns: repeat(4, 420px);
+    grid-template-columns: repeat(5, 420px);
+
+    @media screen and (max-width : 900px) {
+        grid-template-columns: repeat(5, 300px);
+    }
 
     .element {
         padding: 32px 46px;
@@ -52,6 +56,8 @@
     }
 
 }
+
+
 
 .list-elements {
    overflow: auto hidden;
